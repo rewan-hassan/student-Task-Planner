@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <section class="progress-card">
+     <h2>Your Progress</h2>
+     <p id="progress-text">0% completed</p>
+     <div class="progress-track">
+     <div id="progress-bar" class="progress-bar"></div>
+  </div>
+    <p id="task-count">0 tasks</p>
+</section>
+
+<form id="task-form">
+  <input
+    type="text"
+    id="task-input"
+    placeholder="Enter a new task..."
+    autocomplete="off"
+    required>
+    
+  <button type="submit" id="add-button">Add Task</button>
+</form>
+
+<nav class="filters" aria-label="Filter tasks">
+  <button type="button" class="filter active" data-filter="all">
+    All
+  </button>
+  <button type="button" class="filter" data-filter="active">
+    Active
+  </button>
+  <button type="button" class="filter" data-filter="completed">
+    Completed
+  </button>
+</nav>
+
+<ul id="task-list"></ul>
+
+<p id="empty-message">No tasks yet. Add your first task!</p>
+
+   <script src="script.js"></script>
+</body>
+</html>
